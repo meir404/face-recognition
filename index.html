@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="face.api.min.js" defer></script>
+    <script src="app.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .loading {
+            height: 0;
+            width: 0;
+            padding: 15px;
+            border: 6px solid #ccc;
+            border-right-color: rgb(3, 3, 3);
+            border-radius: 22px;
+            -webkit-animation: rotate 1s infinite linear;
+            /* left, top and position just for the demo! */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 10000;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        @-webkit-keyframes rotate {
+
+            /* 100% keyframe for  clockwise. 
+     use 0% instead for anticlockwise */
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading hide"></div>
+    <video autoplay id="video" muted width="720" height="560"> </video> 
+    <input type='file' id='uploudFile'> </input>
+</body>
+
+</html>
